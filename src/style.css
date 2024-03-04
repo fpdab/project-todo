@@ -137,6 +137,7 @@ body {
 }
 
 .main .todos .todo-container .upper {
+  display: flex;
 }
 
 .main .todos .todo-container .upper input {

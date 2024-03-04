@@ -54,7 +54,7 @@ export default function createTodoSkeleton() {
   descriptionField.setAttribute("class", "descriptionField");
   lower.appendChild(document.createTextNode("Description: "));
   descriptionField.appendChild(description);
-  upper.appendChild(descriptionField);
+  lower.appendChild(descriptionField);
 
   container.appendChild(upper);
   container.appendChild(lower);
