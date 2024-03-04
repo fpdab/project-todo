@@ -28,18 +28,20 @@ body {
   background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
-  padding-block: 1vh;
-  padding-inline: 1vw;
+  padding-block: 0.6rem;
+  padding-inline: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .header .links {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.header .links .logo {
+.header .links .logo a {
+  background: none;
+  border: none;
   color: var(--tertiary-color);
   font-size: 3rem;
   text-shadow: 0 0 2px var(--tertiary-color);
@@ -47,8 +49,13 @@ body {
 
 .header .links .about a {
   text-decoration: none;
-  color: white;
+  color: var(--tertiary-color);
   padding-right: 1vw;
+  font-weight: 700;
+}
+
+.header .links .about a:hover {
+  text-shadow: 0 0 0.05rem var(--tertiary-color);
 }
 
 .buttons {
@@ -57,20 +64,21 @@ body {
   grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
+  gap: 1px;
 }
 
-.buttons .newProject {
+.buttons button {
   min-width: 15%;
   background-color: var(--tertiary-color);
   border: none;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
   font-weight: 700;
   color: var(--primary-color);
 }
 
-.buttons .newProject:hover {
+.buttons button:hover {
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
   color: var(--secondary-color);
 }
@@ -80,8 +88,30 @@ body {
   min-width: 10rem;
   grid-column: 1/2;
   grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
   background-color: var(--secondary-color);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-inline: 0.3rem;
+}
+
+.sidebar button {
+  border-style: none;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--tertiary-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: -0 0 3px 0 rgba(0, 0, 0, 0.5);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.sidebar button:hover {
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 0.01rem var(--primary-color);
 }
 
 .main {
@@ -90,6 +120,31 @@ body {
   grid-column: 2/3;
   grid-row: 3/4;
   background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.main .todos {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.main .todos .todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main .todos .todo-container .upper {
+}
+
+.main .todos .todo-container .upper input {
+  max-width: 7rem;
+}
+
+.main .todos .todo-container .lower input {
+  width: 300px;
 }
 
 .stats {
@@ -109,6 +164,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
