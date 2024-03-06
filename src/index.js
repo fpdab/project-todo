@@ -207,6 +207,7 @@ function showTodoSkeleton(projectIndex) {
 
   const submitButton = document.createElement("button");
   submitButton.setAttribute("class", "submitButton");
+  submitButton.appendChild(document.createTextNode("Add Todo"));
   submitButton.addEventListener("click", () => createTodo(projectIndex));
   lower.appendChild(submitButton);
 

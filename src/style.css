@@ -78,11 +78,6 @@ body {
   color: var(--primary-color);
 }
 
-.buttons button:hover {
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
-  color: var(--secondary-color);
-}
-
 .sidebar {
   min-height: 20rem;
   min-width: 10rem;
@@ -107,11 +102,6 @@ body {
   box-shadow: -0 0 3px 0 rgba(0, 0, 0, 0.5);
   color: var(--primary-color);
   font-weight: 700;
-}
-
-.sidebar button:hover {
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 0 0.01rem var(--primary-color);
 }
 
 .main {
@@ -179,4 +169,13 @@ body {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2) !important;
+  color: var(--secondary-color);
+}
+
+.submitButton:hover {
+  color: var(--tertiary-color) !important;
 }
